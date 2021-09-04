@@ -262,7 +262,7 @@ button{
 }
 
 /* ===== custom scrollbar ===== */
-::-webkit-scrollbar{
+/*::-webkit-scrollbar{
     width: 5px;
 }
 ::-webkit-scrollbar-track{
@@ -270,7 +270,7 @@ button{
 }
 ::-webkit-scrollbar-thumb{
     background-color: var(--orange);
-}
+}*/
 
 /* ============ Background squares animation start ============*/
 .square-animation{
@@ -480,9 +480,11 @@ button{
     transform: rotate(-45deg);
 }
 
-.header .nav-toggler.active:hover span::before,
-.header .nav-toggler.active:hover span::after{
-    transform: rotate(0deg);
+@media (min-width: 992px) {
+    .header .nav-toggler.active:hover span::before,
+    .header .nav-toggler.active:hover span::after{
+        transform: rotate(0deg);
+    }
 }
 
 .header .nav-toggler span::before,
