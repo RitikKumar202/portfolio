@@ -261,17 +261,6 @@ button{
     color: var(--orange);
 }
 
-/* ===== custom scrollbar ===== */
-/*::-webkit-scrollbar{
-    width: 5px;
-}
-::-webkit-scrollbar-track{
-    background-color: var(--main-color);
-}
-::-webkit-scrollbar-thumb{
-    background-color: var(--orange);
-}*/
-
 /* ============ Background squares animation start ============*/
 .square-animation{
     position: fixed;
@@ -999,7 +988,7 @@ button{
 
 @media (max-width: 580px) {
   .popup{
-      max-width: calc(100% - 50px);
+      max-width: calc(100% - 45px);
   }
   .contact-info-item span{
       display: block;
