@@ -988,7 +988,7 @@ button{
 
 @media (max-width: 580px) {
   .popup{
-      max-width: calc(100% - 45px);
+      max-width: calc(100% - 40px);
   }
   .contact-info-item span{
       display: block;
