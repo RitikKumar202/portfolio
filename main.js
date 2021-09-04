@@ -9,9 +9,6 @@ window.addEventListener("load", function(){
 document.querySelector(".close").addEventListener("click", function(){
     document.querySelector(".popup-container").style.display = "none";
 });
-document.querySelector(".popup a").addEventListener("click", function(){
-    document.querySelector(".popup-container").style.display = "none";
-});
 
 /*=============== Toggle body scrolling ================== */
 function toggleBodyScrolling(){
