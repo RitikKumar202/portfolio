@@ -646,6 +646,7 @@ button{
     padding: 0 20px;
     margin: auto;
 }
+
 .about-text h3{
     font-size: 20px;
     font-family: inherit;
@@ -653,6 +654,10 @@ button{
     text-transform: capitalize;
     letter-spacing: 1px;
     font-weight: 500;
+}
+
+.about-text p{
+    text-align: justify;
 }
 
 .about-text p a{
@@ -842,6 +847,9 @@ button{
 .contact-text{
     margin-bottom: 30px;
 }
+.contact-text p{
+    text-align: justify;
+}
 
 .contact-info-item{
     margin-bottom: 10px;
@@ -1015,9 +1023,6 @@ button{
         margin: 15px 0;
     }
     .about-text p{
-        font-size: 15px;
-    }
-    .tab-content p{
         font-size: 15px;
     }
 }
