@@ -14,7 +14,7 @@ document.querySelector(".close").addEventListener("click", function(){
 const typed = new Typed(".typing", {
     strings: ["Frontend Developer", "Competitive Programmer"],
     typeSpeed: 120,
-    backSpeed: 80,
+    backSpeed: 100,
     loop: true
 });
 
