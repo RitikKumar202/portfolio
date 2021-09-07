@@ -3,11 +3,19 @@ window.addEventListener("load", function(){
     setTimeout(
         function open(event){
             document.querySelector(".popup-container").style.display = "block";
-        },2000)
+        },3000)
 });
 
 document.querySelector(".close").addEventListener("click", function(){
     document.querySelector(".popup-container").style.display = "none";
+});
+
+/*=============Typing animation ================*/
+const typed = new Typed(".typing", {
+    strings: ["Frontend Developer", "Competitive Programmer"],
+    typeSpeed: 120,
+    backSpeed: 80,
+    loop: true
 });
 
 /*=============== Toggle body scrolling ================== */
