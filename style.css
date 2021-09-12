@@ -178,6 +178,17 @@ button{
     transform: translate(-50%, -50%);
 }
 
+/* ===== custom scrollbar ===== */
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--orange);
+}
+
 /* ========= section title ======== */
 .section-title{
     padding: 0 15px;

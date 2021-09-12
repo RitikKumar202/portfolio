@@ -2,7 +2,7 @@
 const typed = new Typed(".typing", {
     strings: ["Frontend Developer", "Competitive Programmer"],
     typeSpeed: 100,
-    backSpeed: 80,
+    backSpeed: 70,
     loop: true
 });
 
