@@ -939,6 +939,9 @@ button{
     .home-btn .btn2{
         margin-top: 18px;
     }
+    ::-webkit-scrollbar{
+      display: none;
+    }
 }
 
 @media (max-width: 580px) {
