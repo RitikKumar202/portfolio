@@ -189,41 +189,6 @@ button{
     background: var(--orange);
 }
 
-/*==========page loader=============*/
-.pageloader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--main-color);
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.pageloader-inner{
-    width: 100px;
-}
-.pageloader-inner .box{
-    width: 40px;
-    height: 40px;
-    background-color: var(--orange);
-    display: inline-block;
-    animation: pulse 0.6s ease-in infinite alternate;
-}
-
-.pageloader-inner .box2,
-.pageloader-inner .box3{
-    animation-delay: 0.6s;
-}
-
-@keyframes pulse {
-    100%{
-        opacity: 0;
-    }
-}
-
 /* ========= section title ======== */
 .section-title{
     padding: 0 15px;
