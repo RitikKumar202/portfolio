@@ -1,3 +1,8 @@
+window.addEventListener("load", () =>{
+    setTimeout(() =>{
+        document.querySelector(".pageloader").style.display = "none";
+    });
+}, 5000);
 /*=============Typing animation ================*/
 const typed = new Typed(".typing", {
     strings: ["Frontend Developer", "Competitive Programmer"],
