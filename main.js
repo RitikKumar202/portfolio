@@ -75,3 +75,12 @@ document.addEventListener("click", (e) =>{
         toggleBodyScrolling();
     }
 });
+
+//GSAP
+gsap.from(".nav-toggler span", {opacity: 0, duration: 1, delay: 0.5, y: -10});
+gsap.from(".home-content h1", {opacity: 0, duration: 1, delay: 1, y: -50});
+gsap.from(".home-content p", {opacity: 0, duration: 1, delay: 1.5, y: -35});
+gsap.from(".home-social .home-social-1", {opacity: 0, duration: 1, delay: 2, x: -30});
+gsap.from(".home-social .home-social-2", {opacity: 0, duration: 1, delay: 2, x: 30});
+gsap.from(".home-btn .btn1", {opacity: 0, duration: 1, delay: 2.5, x: -30});
+gsap.from(".home-btn .btn2", {opacity: 0, duration: 1, delay: 2.5, x: 30});
