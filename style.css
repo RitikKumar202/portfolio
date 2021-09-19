@@ -318,7 +318,7 @@ button{
 .overlay-effect-item{
     height: 10vh;
     background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(8px);
     transition: all 0.5s ease;
 }
 
@@ -495,24 +495,9 @@ button{
     transition: all 0.3s ease;
 }
 
-.header .nav-inner ul a::before{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 50%;
-    width: 0%;
-    background-color: rgba(255, 255, 255, 0.25);
-    opacity: 0.4;
-    z-index: -1;
-    transition: width 0.5s ease;
-}
-.header .nav-inner ul a:hover:before{
-    width: 100%;
-}
-
 .header .nav-inner ul a:hover{
     color: #d66b00;
+    transform: scale(1.1);
 }
 
 /* ===================== Home section ================== */
@@ -741,15 +726,15 @@ button{
     width: 100%;
     overflow: hidden;
     margin: 20px;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.10);
     padding: 20px 20px;
     box-shadow: 0 4px 31px rgba(0, 0, 0, 0.30);
     border: 1px solid rgba(255, 255, 255, 0.40);
-    transition: all 0.3s ease;
-    transform: scale(0.97);
+    transition: all 0.4s ease;
 }
 .project-item:hover{
-    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.20);
+    transform: scale(1.02);
 }
 
 .project-item-thumbnail{
