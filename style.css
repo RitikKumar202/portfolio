@@ -746,12 +746,10 @@ button{
     box-shadow: 0 4px 31px rgba(0, 0, 0, 0.30);
     border: 1px solid rgba(255, 255, 255, 0.40);
     transition: all 0.3s ease;
+    transform: scale(0.99);
+    opacity: 0.9;
 }
-.project-row:hover .project-item{
-    transform: scale(0.9);
-    opacity: 0.5;
-}
-.project-row .project-item:hover{
+.project-item:hover{
     transform: scale(1);
     opacity: 1;
 }
