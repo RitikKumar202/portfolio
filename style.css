@@ -748,12 +748,10 @@ button{
     transition: all 0.3s ease;
 }
 .project-row:hover .project-item{
-    filter: blur(20px);
     transform: scale(0.9);
     opacity: 0.5;
 }
 .project-row .project-item:hover{
-    filter: blur(0px);
     transform: scale(1);
     opacity: 1;
 }
