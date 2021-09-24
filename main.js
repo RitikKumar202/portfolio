@@ -2,7 +2,7 @@
 const typed = new Typed(".typing", {
     strings: ["Frontend Developer", "Competitive Programmer"],
     typeSpeed: 100,
-    backSpeed: 70,
+    backSpeed: 60,
     loop: true
 });
 
@@ -54,18 +54,19 @@ function activeSection(sectionId){
     window.scrollTo(0,0);
 }
 
-/* ==================== About tabs =============== */
-const tabsContainer = document.querySelector(".about-tabs"),
-aboutSection = document.querySelector(".about-section");
-
-tabsContainer.addEventListener("click", (e) =>{
-    if(e.target.classList.contains("tab-item") && !e.target.classList.contains("active")){
-        tabsContainer.querySelector(".active").classList.remove("active");
-        e.target.classList.add("active");
-        const target = e.target.getAttribute("data-target");
-        aboutSection.querySelector(".tab-content.active").classList.remove("active");
-        aboutSection.querySelector(target).classList.add("active");
-    }
+/* ==================== About Accordion =============== */
+$(document).ready(function(){
+    $(".card-header").click(function(){
+        if($(this).next(".card-body").hasClass("active")){
+            $(this).next(".card-body").removeClass("active").slideUp();
+            $(this).children("span").removeClass("uil-minus").addClass("uil-plus");
+        }else{
+            $(".card .card-body").removeClass("active").slideUp();
+            $(".card .card-header span").removeClass("uil-minus").addClass("uil-plus");
+            $(this).next(".card-body").addClass("active").slideDown();
+            $(this).children("span").removeClass("uil-plus").addClass("uil-minus");
+        }
+    });
 });
 
 /* ============== Toggle contact form ============== */

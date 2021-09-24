@@ -615,104 +615,52 @@ button{
     letter-spacing: 1px;
 }
 
-.about-tabs{
-    margin-top: 25px;
+.accordion .card{
+    margin: 20px 0;
 }
 
-.about-tabs .tab-item{
-    padding: 4px 20px;
-    background-color: transparent;
-    color: var(--color);
-    border: 2px solid transparent;
-    text-transform: capitalize;
-    display: inline-block;
-    font-size: 20px;
-    letter-spacing: 1px;
+.accordion .card .card-header p{
     cursor: pointer;
-    font-weight: 500;
-    margin: 0 10px 0 0;
+    color: var(--white);
+    background: var(--orange);
     position: relative;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-.about-tabs .tab-item:hover{
-    border: 2px solid #003f88;
-}
-
-.about-tabs .tab-item:last-child{
-    margin: 0;
-}
-
-.about-tabs .tab-item.active{
-    color: var(--orange);
-    border: 2px solid var(--orange);
-    opacity: 1;
-    cursor: auto;
-}
-
-.about-text .timeline{
-    position: relative;
-}
-.about-text .timeline::before{
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 1px;
-    top: 0;
-    left: 5px;
-    background-color: var(--orange);
-}
-
-.about-text .tab-content{
-    padding: 40px 0;
-    display: none;
-    margin-bottom: 15px;
-}
-
-.about-text .tab-content.active{
-    display: block;
-}
-
-.about-text .timeline-item{
-    margin-bottom: 30px;
-    position: relative;
-    padding: 10px 0 0 40px;
-}
-.about-text .timeline-item::before{
-    content: '';
-    position: absolute;
-    height: 11px;
-    width: 11px;
-    background-color: var(--orangered);
-    border-radius: 50%;
-    left: 0;
-    top: 16px;
-}
-
-.about-text .timeline-item:last-child{
-    margin-bottom: 0;
-}
-
-.about-text .timeline-item .date{
-    display: block;
-    color: var(--orangered);
-    font-weight: 600;
-    margin: 0 0 10px;
-}
-.about-text .timeline-item h4{
+    padding: 10px 20px;
     font-size: 18px;
-    text-transform: capitalize;
-    margin: 0 0 10px;
     font-weight: 500;
+    letter-spacing: 1px;
 }
-.about-text .timeline-item h4 span{
-    font-weight: 400;
-    color: var(--orange);
+.accordion .card .card-header{
+    position: relative;
+}
+.accordion .card .card-header span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: var(--white);
+    background: var(--orange);
+    font-size: 18px;
 }
 
-.about-text .btn{
-    margin: 10px 10px;
+.accordion .card .card-body{
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.60);
+    margin-top: 20px;
+    display: none;
+}
+.accordion .card:nth-child(1) .card-body{
+    display: block;
+}
+.accordion .card .card-body p{
+    font-size: 15px;
+    color: var(--light);
+    text-align: justify;
+}
+.accordion .card .card-body p span{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
 }
 
 /* ===================== Project section ================== */
@@ -733,7 +681,7 @@ button{
     transition: all 0.4s ease;
 }
 .project-item:hover{
-    background-color: rgba(255, 255, 255, 0.20);
+    background-color: rgba(255, 255, 255, 0.25);
     transform: scale(1.02);
 }
 
