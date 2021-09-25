@@ -657,10 +657,12 @@ button{
     color: var(--light);
     text-align: justify;
 }
-.accordion .card .card-body p span{
+.accordion .card .card-body span{
     font-size: 18px;
     font-weight: 500;
     color: var(--white);
+    letter-spacing: 0.7px;
+    text-align: start;
 }
 
 /* ===================== Project section ================== */
