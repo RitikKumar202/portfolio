@@ -6,6 +6,7 @@
 /* ============== Variables ================= */
 :root{
     --main-color: #171941;
+    --main-light: #262853;
     --color: #ffffff;
     --blue: #5e72e4;
     --indigo: #5603ad;
@@ -317,8 +318,7 @@ button{
 
 .overlay-effect-item{
     height: 10vh;
-    background-color: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
+    background-color: var(--main-light);
     transition: all 0.5s ease;
 }
 
@@ -486,18 +486,41 @@ button{
 
 .header .nav-inner ul a{
     font-size: 50px;
-    display: inline-block;
+    display: block;
+    position: relative;
     padding: 8px 0;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: 600;
-    color: var(--main-color);
+    color: var(--white);
     position: relative;
     transition: all 0.3s ease;
+    transition-delay: 0.2s;
 }
 
 .header .nav-inner ul a:hover{
-    color: #d66b00;
-    transform: scale(1.1);
+    color: rgba(255, 255, 255, 0.15);
+    transition-delay: 0s;
+}
+
+.header .nav-inner ul a::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 23px;
+    color: var(--orange);
+    font-weight: 600;
+    letter-spacing: 40px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.header .nav-inner ul a:hover:before{
+    opacity: 1;
+    letter-spacing: 5px;
+    transition-delay: 0.2s;
 }
 
 /* ===================== Home section ================== */
