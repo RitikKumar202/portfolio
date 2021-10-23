@@ -624,107 +624,48 @@ button{
     margin-bottom: 20px;
 }
 
-.skills .skill-item{
+.skill-bar .skill-item{
     margin: 20px 0;
 }
-.skills .skill-item:first-child{
+.skill-bar .skill-item:first-child{
     margin-top: 0;
 }
 
-.skills .skill-item .info{
-    margin-bottom: 6px;
+.skill-bar .skill-item .info{
+    margin-bottom: 5px;
 }
-.skills .skill-item .info span{
-    font-size: 17px;
-    letter-spacing: 0.8px;
-    color: var(--white);
+.skill-bar .skill-item .info span{
+    font-size: 18px;
+    font-weight: 500;
 }
 
-.skills .skill-item .progress-line{
+.skill-bar .skill-item .progress-line{
     position: relative;
     height: 10px;
     width: 100%;
     background: rgba(255, 255, 255, 0.25);
 }
-.skills .skill-item .progress-line span{
+
+.skill-item .progress-line span{
     height: 100%;
+    background: var(--orange);
     position: absolute;
 }
 
 .progress-line.html span{
-    width: 90%;
-    background: var(--green);
+    width: 95%;
 }
 .progress-line.css span{
-    width: 80%;
-    background: var(--red);
+    width: 85%;
 }
 .progress-line.js span{
-    width: 60%;
-    background: var(--purple);
+    width: 65%;
 }
 .progress-line.c span{
     width: 80%;
-    background: var(--pink);
 }
 .progress-line.cpp span{
     width: 85%;
-    background: var(--danger);
-}
-.progress-line.git span{
-    width: 40%;
-    background: var(--yellow);
-}
-.progress-line.github span{
-    width: 55%;
-    background: var(--teal);
-}
-
-.skills .skill-item .progress-line span::before{
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -10px;
-    height: 0;
-    width: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: var(--white);
-}
-
-.skills .skill-item .progress-line span::after{
-    position: absolute;
-    right: 0;
-    top: -28px;
-    color: var(--main-color);
-    background: var(--white);
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    padding: 1px 8px;
-}
-
-.progress-line.html span::after{
-    content: "90%";
-}
-.progress-line.css span::after{
-    content: "80%";
-}
-.progress-line.js span::after{
-    content: "60%";
-}
-.progress-line.c span::after{
-    content: "80%";
-}
-.progress-line.cpp span::after{
-    content: "85%";
-}
-.progress-line.git span::after{
-    content: "40%";
-}
-.progress-line.github span::after{
-    content: "55%";
 }
 
 .accordion .card{
@@ -831,9 +772,9 @@ button{
 }
 
 /*=============== contact section ================== */
-/*.contact-section.active{
+.contact-section.active{
     display: flex;
-}*/
+}
 
 .contact-content{
     max-width: 700px;
