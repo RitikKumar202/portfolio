@@ -525,53 +525,62 @@ button {
     transform: scale(1);
 }
 
-.header .nav-inner ul {
-    padding: 80px 0;
-}
-
 .header .nav-inner ul li {
     text-align: center;
+    position: relative;
+    margin: 12px 0;
+    padding: 0 12px;
 }
 
-.header .nav-inner ul a {
-    font-size: 40px;
-    display: block;
-    position: relative;
-    padding: 1px 0;
+.header .nav-inner ul li a{
+    font-size: 35px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--white);
-    position: relative;
-    transition: all 0.3s ease;
-    transition-delay: 0.2s;
 }
 
-.header .nav-inner ul a:hover {
-    color: rgba(255, 255, 255, 0.15);
-    transition-delay: 0s;
-}
-
-.header .nav-inner ul a::before {
-    content: attr(data-text);
+.header .nav-inner ul li::before{
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 23px;
-    color: var(--orange);
-    font-weight: 600;
-    letter-spacing: 40px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: all 0.3s ease;
+    height: 33.33%;
+    width: 0;
+    background-color: var(--orange);
+    right: 0;
+    z-index: -1;
+    top: 33.33%;
+    transition: all 0.5s;
 }
 
-.header .nav-inner ul a:hover:before {
-    opacity: 1;
-    letter-spacing: 5px;
-    transition-delay: 0.2s;
+.header .nav-inner ul li::after{
+    content: '';
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: var(--orange);
+    left: 0;
+    z-index: -1;
+    bottom: 0;
+    transition: all 0.5s;
 }
+
+.header .nav-inner ul li a::before{
+    content: '';
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: var(--orange);
+    bottom: 66.66%;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.header .nav-inner ul li:hover::before,
+.header .nav-inner ul li:hover::after,
+.header .nav-inner ul li:hover a::before{
+    width: 100%;
+}
+
 
 /* ===================== Home section ================== */
 .home-section .min-vh-100 {
@@ -843,16 +852,14 @@ button {
 }
 
 .contact-info-item p {
-    /* color: var(--white); */
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 500;
 }
 
 .contact-info-item .social-links span {
     display: block;
     margin-bottom: 13px;
     color: var(--white);
-    font-size: 22px;
 }
 
 .contact-info-item .social-links a {
@@ -987,10 +994,6 @@ button {
 
 /* ======================= Responsive =================== */
 @media (max-width: 767px) {
-    .header .nav-inner ul a {
-        font-size: 36px;
-    }
-
     .home-btn {
         flex-direction: column;
     }
@@ -1005,12 +1008,8 @@ button {
 }
 
 @media (max-width: 580px) {
-    .header .nav-inner ul a {
-        font-size: 34px;
-    }
-
-    .header .nav-inner ul a::before{
-        font-size: 18px;
+    .header .nav-inner ul li a {
+        font-size: 32px;
     }
 
     .popup {
@@ -1031,17 +1030,7 @@ button {
     }
 }
 
-@media (max-width: 450px) {
-    .header .nav-inner ul a {
-        font-size: 32px;
-    }
-}
-
 @media (max-width: 377px) {
-    .header .nav-inner ul a {
-        font-size: 30px;
-    }
-
     .about-tabs .tab-item {
         display: flex;
         flex-direction: column;
