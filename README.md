@@ -4,7 +4,7 @@
 Hello!! Welcome to my Portfolio.
 
 
-## Screenshots
+## Preview
 
 ### 1) Navigation Page
 ![App Screenshot](https://github.com/RitikKumar202/portfolio/blob/master/screenshots/Navigation-Page.png?raw=true)
