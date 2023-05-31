@@ -7,7 +7,7 @@ const typed = new Typed(".typing", {
 });
 
 /*=============== Toggle body scrolling ================== */
-function toggleBodyScrolling(){
+function toggleBodyScrolling() {
     document.body.classList.toggle("hide-scrolling");
 }
 
@@ -15,7 +15,7 @@ function toggleBodyScrolling(){
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", toggleNavbar);
 
-function toggleNavbar(){
+function toggleNavbar() {
     navToggler.classList.toggle("active");
     document.querySelector(".nav").classList.toggle("open");
     toggleOverlayEffect();
@@ -23,22 +23,22 @@ function toggleNavbar(){
 }
 
 /*================== Toggle overlay effect ================ */
-function toggleOverlayEffect(){
+function toggleOverlayEffect() {
     document.querySelector(".overlay-effect").classList.toggle("active");
 }
 
 /*============= hide and show section ============= */
-document.addEventListener("click", (e) =>{
-    if(e.target.classList.contains("link-item") && e.target.hash !== ""){
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("link-item") && e.target.hash !== "") {
         const hash = e.target.hash;
-        if(e.target.classList.contains("nav-item")){
+        if (e.target.classList.contains("nav-item")) {
             activeSection(hash);
             toggleNavbar();
-        }else{
+        } else {
             toggleBodyScrolling();
             toggleOverlayEffect();
             document.querySelector(".nav-toggler").classList.add("toggle-hide");
-            setTimeout(() =>{
+            setTimeout(() => {
                 activeSection(hash);
                 toggleOverlayEffect();
                 toggleBodyScrolling();
@@ -48,19 +48,19 @@ document.addEventListener("click", (e) =>{
     }
 });
 
-function activeSection(sectionId){
+function activeSection(sectionId) {
     document.querySelector("section.active").classList.remove("active");
     document.querySelector(sectionId).classList.add("active");
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 }
 
 /* ==================== About Accordion =============== */
-$(document).ready(function(){
-    $(".card-header").click(function(){
-        if($(this).next(".card-body").hasClass("active")){
+$(document).ready(function () {
+    $(".card-header").click(function () {
+        if ($(this).next(".card-body").hasClass("active")) {
             $(this).next(".card-body").removeClass("active").slideUp();
             $(this).children("span").removeClass("uil-minus").addClass("uil-plus");
-        }else{
+        } else {
             $(".card .card-body").removeClass("active").slideUp();
             $(".card .card-header span").removeClass("uil-minus").addClass("uil-plus");
             $(this).next(".card-body").addClass("active").slideDown();
@@ -69,9 +69,25 @@ $(document).ready(function(){
     });
 });
 
+// ========================= Achievements ==================
+let slides = document.querySelectorAll('.slide-container');
+let index = 0;
+
+function next() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+}
+
+function prev() {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length;
+    slides[index].classList.add('active');
+}
+
 /* ============== Toggle contact form ============== */
-document.addEventListener("click", (e) =>{
-    if(e.target.classList.contains("toggle-contact-form-btn")){
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("toggle-contact-form-btn")) {
         document.querySelector(".contact-form").classList.toggle("open");
         toggleBodyScrolling();
     }
