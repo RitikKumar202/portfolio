@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritik Kumar | Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -51,12 +52,14 @@
                 <nav class="nav">
                     <div class="nav-inner">
                         <ul>
-                            <li><a href="#home" class="nav-item link-item" data-text="Home">Home</a></li>
-                            <li><a href="#about" class="nav-item link-item" data-text="About">About</a></li>
-                            <li><a href="#projects" class="nav-item link-item" data-text="Projects">Projects</a></li>
-                            <li><a href="https://drive.google.com/file/d/17KHMcFP-66T8dbLpv2E23xG_jpe3pxTL/view"
-                                    target="_blank" class="nav-item" data-text="Resume">Resume</a></li>
-                            <li><a href="#contact" class="nav-item link-item" data-text="Contact">Contact</a></li>
+                            <li><a href="#home" class="nav-item link-item" data-text="Home"><span>npm</span> i home</a>
+                            </li>
+                            <li><a href="#about" class="nav-item link-item" data-text="About"><span>npm</span> i
+                                    about</a></li>
+                            <li><a href="#projects" class="nav-item link-item" data-text="Projects"><span>npm</span> i
+                                    projects</a></li>
+                            <li><a href="#contact" class="nav-item link-item" data-text="Contact"><span>npm</span> i
+                                    contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -71,7 +74,7 @@
 
             <div class="row min-vh-100">
                 <div class="home-content">
-                    <h1>Hi, I'm <span>Ritik</span></h1>
+                    <h1>Hi,I'm <span>Ritik Kumar</span></h1>
                     <p>I'm a <span class="typing"></span></p>
                     <div class="home-social">
                         <a href="https://www.github.com/ritikkumar202/" target="_blank" class="home-social-2"><i
@@ -102,23 +105,27 @@
 
             <div class="row about-row">
                 <div class="about-text">
+                    <div class="profile">
+                        <img src="images/profile.png" alt="Ritik Kumar">
+                    </div>
                     <p>Hello there! my name is Ritik Kumar. I am a Computer Science Engineering student, highly
-                        interested in
-                        Web Developement, Competitive Programming and Gaming. I'm pursuing Bachelors in Engineering
-                        at
-                        KCC Institute of Technology and Management, Greater Noida. Skilled in C++, Data Structure,
-                        Algorithms, and web developement.
-                        I make web applications using Html, Css, JavaScript, ReactJs, NodeJs and MongoDB and practice
-                        Competitive
-                        Programming in my spare time.
+                        interested in Web Developement, Competitive Programming and Gaming.<br><br>
+                        Skilled in C++, Data Structure & Algorithms, and web developement(Frontend + Backend). <br><br>
+                        I make web applications using Html, Css, JavaScript, ReactJs, NodeJs, MongoDB & MySQL to learn
+                        how code works and practice
+                        Competitive Programming in my spare time.<br><br>
                         As a core programmer, i love taking challenges and love being part of the solution.
                         I am creative person and I love to test my boundaries. In order to do so, I keep pushing myself
                         to think
-                        out of the box. <br>
+                        out of the box. <br><br>
                         To see about my projects please visit <a href="https://www.github.com/ritikkumar202/"
                             target="_blank">Github</a> profile or check out
                         <a href="#projects" class="link-item">Project</a> section.
                     </p>
+                    <div class="resume">
+                        <a href="https://drive.google.com/file/d/1MQojcd7nfMD5m02gqevcY6ylz2dIhopE/view" target="_blank"
+                            class="" data-text="Resume">Download Resume</a>
+                    </div>
 
                     <!-- Education starts -->
                     <h3>Education</h3>
@@ -144,7 +151,7 @@
                             <div class="card-body">
                                 <span>Delhi Public School International, Muzaffarpur</span><br>
                                 <p class="edu-details">
-                                    Percentage : 74.4%<br>
+                                    Percentage : 74.40%<br>
                                     2017 - 2019
                                 </p>
                             </div>
@@ -244,19 +251,16 @@
                     <div class="coding-platform">
                         <div class="coding-main">
                             <div class="cp">
-                                <a href="https://leetcode.com/error_202" target="_blank"><img
-                                        src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06"
-                                        alt="Leetcode"></a>
+                                <a class="leetcode" href="https://leetcode.com/error_202" target="_blank">Leetcode
+                                    Profile</a>
                             </div>
                             <div class="cp">
-                                <a href="https://codeforces.com/profile/error_202" target="_blank"><img
-                                        src="https://img.shields.io/badge/Codeforces-%2339457E.svg?logo=codeforces&amp;logoColor=white&style=for-the-badge"
-                                        alt="Codeforces"></a>
+                                <a class="cf" href="https://codeforces.com/profile/error_202" target="_blank">Codeforces
+                                    Profile</a>
                             </div>
                             <div class="cp">
-                                <a href="https://codechef.com/users/dreamer365" target="_blank"><img
-                                        src="https://img.shields.io/badge/CodeChef-%23964B00.svg?style=for-the-badge&logo=CodeChef&logoColor=white"
-                                        alt="Codechef"></a>
+                                <a class="cc" href="https://codechef.com/users/dreamer365" target="_blank">Codechef
+                                    Profile</a>
                             </div>
                         </div>
                     </div>
@@ -324,7 +328,9 @@
             <div class="row project-row">
                 <!-- Project item start -->
                 <div class="project-item">
-                    <h3 class="project-item-title">Hospital Management System</h3>
+                    <h3 class="project-item-title">
+                        <i class='bx bx-code'></i> Hospital Management System <i class='bx bx-code-alt'></i>
+                    </h3>
                     <p class="project-item-text"><span>Technology used : </span>HTML, CSS, React, NodeJs, ExpressJs and
                         MongoDB.
                     </p>
@@ -339,7 +345,9 @@
 
                 <!-- Project item start -->
                 <div class="project-item">
-                    <h3 class="project-item-title">Ecommerce App</h3>
+                    <h3 class="project-item-title">
+                        <i class='bx bx-code'></i> Ecommerce App <i class='bx bx-code-alt'></i>
+                    </h3>
                     <p class="project-item-text"><span>Technology used : </span>HTML, CSS, React, NodeJs, ExpressJs and
                         MongoDB.
                     </p>
@@ -354,7 +362,9 @@
 
                 <!-- Project item start -->
                 <div class="project-item">
-                    <h3 class="project-item-title">Weather App</h3>
+                    <h3 class="project-item-title">
+                        <i class='bx bx-code'></i> Weather App <i class='bx bx-code-alt'></i>
+                    </h3>
                     <p class="project-item-text"><span>Technology used : </span>HTML, CSS, JavaScript and Weather Api.
                     </p>
                     <div class="view-project-btn">
@@ -368,7 +378,9 @@
 
                 <!-- Project item start -->
                 <div class="project-item">
-                    <h3 class="project-item-title">Currency Converter</h3>
+                    <h3 class="project-item-title">
+                        <i class='bx bx-code'></i> Currency Converter <i class='bx bx-code-alt'></i>
+                    </h3>
                     <p class="project-item-text"><span>Technology used : </span>HTML, CSS, JavaScript and Exchange-Rate
                         Api.</p>
                     <div class="view-project-btn">
@@ -382,7 +394,9 @@
 
                 <!-- Project item start -->
                 <div class="project-item">
-                    <h3 class="project-item-title">Location Detector</h3>
+                    <h3 class="project-item-title">
+                        <i class='bx bx-code'></i> Location Detector <i class='bx bx-code-alt'></i>
+                    </h3>
                     <p class="project-item-text"><span>Technology used : </span>HTML, CSS, JavaScript and Geolocation
                         Api.</p>
                     <div class="view-project-btn">
@@ -414,8 +428,9 @@
             <div class="row">
                 <div class="contact-content">
                     <div class="contact-text">
-                        <p>As I'm always looking for any new opportunities, that's my inbox is always open. Wheather
-                            you have a questions or just having any ideas to discuss feel free to drop me an email,
+                        <p>As I'm always looking for new opportunities, that's my inbox is always open. Wheather
+                            you have a questions or just having any projects/ideas to discuss feel free to drop me an
+                            email,
                             I'll try my best to get back to you soon!
                         </p>
                     </div>
