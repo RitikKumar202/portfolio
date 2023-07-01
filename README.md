@@ -5,5 +5,5 @@ Hello! Welcome to my Portfolio.
 
 ## Tech Stack
 
-Built the Frontend using **HTML** , **CSS** and **JavaScript** 
+Build the *Responsive* and *User-friendly* Personal Website using **HTML** , **CSS** and **JavaScript** 
 
