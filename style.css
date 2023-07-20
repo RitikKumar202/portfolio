@@ -1028,82 +1028,64 @@ button {
 
 
 /* ===================== Project section ================== */
-.project-row {
+.project-subTitle i {
+    color: #e98b2c;
+    font-size: 20px;
+}
+
+.projectContainer {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.project-item {
+.project-card {
+    background: #111921;
     max-width: 450px;
     width: 100%;
     overflow: hidden;
     margin: 20px;
-    background-color: rgba(255, 255, 255, 0.10);
     padding: 10px 15px;
     box-shadow: 0 4px 31px rgba(0, 0, 0, 0.30);
-    border: 1px solid rgba(255, 255, 255, 0.40);
+    border: 1px solid rgba(255, 255, 255, 0.60);
     transition: all 0.4s ease;
+
 }
 
-.project-item:hover {
-    background-color: rgba(255, 255, 255, 0.15);
+.project-card:hover {
     transform: translateY(-8px);
     border: 1px solid #11cdef;
 }
 
-.project-item h3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.project-heading {
+    margin-bottom: 10px;
     font-size: 22px;
-    text-transform: capitalize;
-    margin-bottom: 8px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.project-languages {
+    background: #2ecce5;
+    width: 100px;
+    color: #171941;
     text-align: center;
+    border-radius: 6px;
+    margin: 6px 0;
 }
 
-.bx-code,
-.bx-code-alt {
-    color: #ff0000;
+.project-url {
+    margin-top: 12px;
     font-size: 30px;
 }
 
-@media (max-width:475px) {
-    .project-item h3 {
-        justify-content: space-around;
-    }
+.project-url a {
+    color: #fff;
 }
 
-.project-item p {
-    padding: 5px 0;
-    color: var(--lighter);
-    font-weight: 500;
+.project-url a:hover {
+    color: #2ecce5;
 }
 
-.project-item p span {
-    color: var(--orange);
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-}
-
-.project-item .view-project-btn {
-    display: flex;
-    padding-top: 15px;
-}
-
-.view-project-btn a {
-    font-size: 30px;
-    margin-right: 8px;
-}
-
-.sc {
-    color: #000000;
-}
-
-.live {
-    color: var(--info);
-}
 
 /*=============== contact section ================== */
 .contact-content {
