@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 /* font-family: 'Recursive', sans-serif;
 font-family: 'Roboto Mono', monospace;
@@ -57,7 +58,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
-    color: var(--light);
+    color: var(--lighter);
     background: var(--main-color);
     /*background-attachment: fixed;*/
     -webkit-tap-highlight-color: transparent;
@@ -416,6 +417,30 @@ button {
     width: 100%;
 }
 
+.nav-logo {
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-family: 'Great Vibes', cursive;
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+    color: #eda617;
+}
+
+.nav-logo span {
+    font-size: 24px;
+    padding-left: 5px;
+    font-weight: 500;
+    color: #fff;
+}
+
+@media (min-width: 1200px) {
+    .nav-logo {
+        left: 95px;
+    }
+}
+
 .header .nav-toggler {
     height: 34px;
     width: 44px;
@@ -583,6 +608,11 @@ button {
     padding-left: 5px;
 }
 
+.home-content img {
+    width: 40px;
+    margin-left: 4px;
+}
+
 .home-content p {
     font-size: 19px;
     margin-bottom: 13px;
@@ -615,6 +645,11 @@ button {
 
 .home-social-2 {
     background: rgb(37, 37, 37);
+}
+
+.twitter-link {
+    background: var(--white);
+    color: var(--info) !important;
 }
 
 .home-btn {
@@ -704,21 +739,33 @@ button {
 }
 
 .skill-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
 }
 
-.skill-items .skill-item {
-    margin: 10px;
-    padding: 0px 10px;
+@media (max-width: 718px) {
+    .skill-items {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+
+@media (max-width: 605px) {
+    .skill-items {
+        grid-template-columns: auto auto auto auto;
+    }
+}
+
+@media (max-width: 490px) {
+    .skill-items {
+        grid-template-columns: auto auto auto;
+    }
 }
 
 .skill-item .logo {
     color: var(--orange);
     text-align: center;
     font-size: 60px;
+    transition: all .4s ease;
 }
 
 .skill-item .logo:hover {
@@ -788,7 +835,7 @@ button {
     text-align: start;
 }
 
-/* ----------- Achievments --------- */
+/* ----------- Achievements --------- */
 .achievements {
     position: relative;
     perspective: 1000px;
@@ -840,6 +887,7 @@ button {
 
 .achievements .slide-container .slide .text {
     text-align: center;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
 }
 
 .achievements .slide-container {
@@ -1102,6 +1150,7 @@ button {
 
 .contact-text p {
     text-align: justify;
+    color: var(--lighter);
 }
 
 .contact-info-item {
@@ -1250,6 +1299,12 @@ button {
 
 
 /* ======================= Responsive =================== */
+@media (max-width: 1000px) {
+    .sec-padding {
+        padding: 100px 0 0;
+    }
+}
+
 @media (max-width: 767px) {
     .home-btn {
         flex-direction: column;
