@@ -613,8 +613,17 @@ button {
     margin-left: 4px;
 }
 
+.home-subcontent {
+    font-size: 16px !important;
+    margin: 2px 0 5px;
+    color: var(--light);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+}
+
 .home-content p {
-    font-size: 19px;
+    font-size: 20px;
     margin-bottom: 13px;
     margin-top: -5px;
     font-weight: 500;
