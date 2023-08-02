@@ -768,10 +768,6 @@ button {
     transition: all .4s ease;
 }
 
-.skill-item .logo:hover {
-    color: var(--white);
-}
-
 .skill-item .info {
     color: var(--white);
     text-align: center;
@@ -779,6 +775,81 @@ button {
     font-weight: 500;
 }
 
+#html {
+    color: #ff5e00;
+    transition: all 300ms ease;
+}
+
+#css {
+    color: #0026ff;
+    transition: all 300ms ease;
+}
+
+#bootstrap {
+    color: #7905e5;
+    transition: all 300ms ease;
+}
+
+#tailwind-css {
+    color: #0697c3;
+    transition: all 300ms ease;
+}
+
+#js {
+    color: #ffff00;
+    transition: all 300ms ease;
+}
+
+#cpp {
+    color: #031682;
+    transition: all 300ms ease;
+}
+
+#react {
+    color: #189ef8;
+    transition: all 300ms ease;
+}
+
+#node {
+    color: #047214;
+    transition: all 300ms ease;
+}
+
+#mongodb {
+    color: #02a11a;
+    transition: all 300ms ease;
+}
+
+#mysql {
+    color: #153f7e;
+    transition: all 300ms ease;
+}
+
+#firebase {
+    color: #f25e0e;
+    transition: all 300ms ease;
+}
+
+#socket {
+    color: #000;
+    transition: all 300ms ease;
+}
+
+#html:hover,
+#css:hover,
+#bootstrap:hover,
+#tailwind-css:hover,
+#js:hover,
+#cpp:hover,
+#react:hover,
+#node:hover,
+#mongodb:hover,
+#mysql:hover,
+#firebase:hover,
+#socket:hover {
+    color: #fff;
+    transition: all 300ms ease;
+}
 
 .accordion .card {
     margin: 20px 0;
@@ -1081,57 +1152,149 @@ button {
     font-size: 20px;
 }
 
-.projectContainer {
+.project-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .project-card {
-    background: #111921;
-    max-width: 450px;
-    width: 100%;
+    width: 500px;
+    margin: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    margin: 20px;
-    padding: 10px 15px;
-    box-shadow: 0 4px 31px rgba(0, 0, 0, 0.30);
-    border: 1px solid rgba(255, 255, 255, 0.60);
-    transition: all 0.4s ease;
-
+    position: relative;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.project-card:hover {
-    transform: translateY(-8px);
-    border: 1px solid #11cdef;
+.project-img {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.project-heading {
-    margin-bottom: 10px;
-    font-size: 22px;
-    color: #fff;
+.project-img img {
+    width: 100%;
+    margin: auto;
+    transition: all 300ms ease;
+}
+
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000000bd;
+    opacity: 1;
+    transition: all 300ms ease;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+.project-item .project-card::before {
+    transform: translateY(0);
+    opacity: 0.6;
+}
+
+.project-item:hover .project-card::before {
+    transform: translateY(-100%);
+    opacity: 0.5;
+}
+
+
+.project-item:hover .project-img {
+    transform: scale(1.1);
+    filter: blur(2px);
+    transition: all 300ms ease;
+}
+
+.project-item .project-description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project-description {
+    position: absolute;
+    top: 50%;
+    padding: 12px;
+    transform: translateY(100%);
+    z-index: 3;
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+}
+
+.project-description--title p {
+    font-size: 25px;
     font-weight: 700;
-}
-
-.project-languages {
-    background: #2ecce5;
-    width: 100px;
-    color: #171941;
-    text-align: center;
-    border-radius: 6px;
-    margin: 6px 0;
-}
-
-.project-url {
-    margin-top: 12px;
-    font-size: 30px;
-}
-
-.project-url a {
     color: #fff;
 }
 
-.project-url a:hover {
-    color: #2ecce5;
+.project-item:hover .project-description--title p {
+    color: #0c31ff;
+}
+
+.project--description--sub-title {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+}
+
+.project--description--sub-title div {
+    background: #2ecce5;
+    color: #111921;
+    border-radius: 8px;
+    margin: 3px;
+    padding: 4px 8px;
+}
+
+.project-description--links {
+    margin-top: 18px;
+}
+
+.project-description--link {
+    font-size: 35px;
+    color: #7b00ff;
+}
+
+.more-project-btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ------ Project section responsive ------- */
+@media (max-width: 530px) {
+    .project-card {
+        width: 330px;
+    }
+
+    .project-description--title p {
+        font-size: 18px;
+    }
+
+    .project--description--sub-title {
+        font-size: 12px;
+    }
+
+    .project--description--sub-title div {
+        padding: 2px 6px;
+    }
+
+    .project-description--links {
+        margin-top: 8px;
+    }
+
+    .project-description--link {
+        font-size: 28px;
+    }
 }
 
 
