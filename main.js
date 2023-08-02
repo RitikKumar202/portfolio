@@ -87,52 +87,10 @@ function prev() {
   slides[index].classList.add("active");
 }
 
-// ============= Project JS ==================
-// const API_URL = "https://api.github.com/users/";
-
-// const getUser = async (username) => {
-//   const res = await fetch(API_URL + username + "/repos");
-//   const data = await res.json();
-//   console.log(data);
-//   let repo = "";
-//   data?.map((repoData) => {
-//     repo += `
-//         <div class="project-card">
-//             <div class="project-heading">${repoData.name}</div>
-//             <div class="project-languages">${
-//               repoData.language ? "#" + repoData.language : ""
-//             }</div>
-//             <div class="project-activity">
-//                 <p><i class='bx bx-star'></i> ${
-//                   repoData.stargazers_count
-//                 } stars</p>
-//                 <p><i class='bx bx-git-repo-forked'></i>  ${
-//                   repoData.forks_count
-//                 } forks</p>
-//             </div>
-//             <div class="project-url">
-//                 <a href=${
-//                   repoData.svn_url
-//                 } target="_blank"><i class='bx bxl-github'></i></a>
-//                 ${
-//                   repoData.homepage
-//                     ? `<a href=${repoData.homepage} target="_blank"><i class='bx bx-globe'></i></a>`
-//                     : ""
-//                 }
-//             </div>
-
-//         </div>
-//     `;
-//   });
-//   document.getElementById("project-cards").innerHTML = repo;
-// };
-
-// getUser("ritikkumar202");
-
-// /* ============== Toggle contact form ============== */
-// document.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("toggle-contact-form-btn")) {
-//     document.querySelector(".contact-form").classList.toggle("open");
-//     toggleBodyScrolling();
-//   }
-// });
+/* ============== Toggle contact form ============== */
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("toggle-contact-form-btn")) {
+    document.querySelector(".contact-form").classList.toggle("open");
+    toggleBodyScrolling();
+  }
+});
