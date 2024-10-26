@@ -719,6 +719,13 @@ button {
     -webkit-transition: all 1s ease;
 }
 
+@media (max-width: 640px) {
+    .profile img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
 .profile img:hover {
     opacity: 0.9;
     filter: grayscale(0%);
