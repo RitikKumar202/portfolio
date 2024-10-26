@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Source+Code+Pro:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 /* font-family: 'Recursive', sans-serif;
 font-family: 'Roboto Mono', monospace;
-font-family: 'Source Code Pro', monospace; */
+font-family: 'Source Code Pro', monospace;
+font-family: 'Space Mono', monospace; */
 
 /* ============== Variables ================= */
 :root {
@@ -420,8 +422,8 @@ button {
 .nav-logo {
     font-size: 35px;
     font-weight: 400;
-    letter-spacing: 2px;
-    font-family: 'Great Vibes', cursive;
+    letter-spacing: -5px;
+    font-family: 'Space Mono', monospace;
     margin-left: 15px;
     position: absolute;
     left: 0;
@@ -429,6 +431,7 @@ button {
 }
 
 .nav-logo span {
+    letter-spacing: -2px;
     font-size: 24px;
     padding-left: 5px;
     font-weight: 500;
@@ -706,23 +709,29 @@ button {
 }
 
 .profile img {
-    width: 300px;
-    height: 300px;
-    border-radius: 35px;
-    opacity: 0.9;
-    filter: grayscale(0%);
-    filter: gray;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
     border: 4px solid #111921;
-    -webkit-filter: grayscale(0%);
-    filter: none;
-    transition: 1s ease;
-}
-
-.profile img:hover {
     transition: 1s ease;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -webkit-transition: all 1s ease;
+}
+
+.profile img:hover {
+    opacity: 0.9;
+    filter: grayscale(0%);
+    filter: #ccc;
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    transition: all 1s ease;
+}
+
+.text-highlight {
+    background-color: var(--yellow);
+    color: #000;
+    padding: 2px;
 }
 
 .about-text h3 {
